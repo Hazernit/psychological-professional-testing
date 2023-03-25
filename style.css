@@ -1,0 +1,336 @@
+/* Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@200&display=swap');
+
+/* Workdrop.io by Romash Malcev 2023 ® */
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider .status {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.slider .status .point {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: -2px;
+    background-color: #ff0;
+    border-radius: 50%;
+    z-index: 15;
+    transition: left 500ms ease-in-out;
+}
+.slider .status .point[data-current='0'] {
+left: 4px;
+}
+.slider .status .point[data-current='1'] {
+left: 24px;
+}
+.slider .status .point[data-current='2'] {
+left: 44px;
+}
+.slider .status .point[data-current='3'] {
+left: 64px;
+}
+.slider .status .point[data-current='4'] {
+left: 84px;
+}
+.slider .status .point[data-current='5'] {
+left: 104px;
+}
+.slider .status .stat {
+width: 10px;
+height: 10px;
+background-color: transparent;
+border-radius: 50%;
+z-index: 20;
+margin: 0px 5px;
+border: 1px solid #fff;
+}
+.slider .status .stat.current {
+background-color: #fff;
+}
+.slider .text {
+position: absolute;
+color: #ff0;
+text-shadow: 0 0 5px #0003;
+z-index: 20;
+transform-origin: right top;
+transform: rotate(-90deg) translateY(calc(-90vh + 2vw));
+display: grid;
+grid-template-columns: 90vh;
+grid-template-rows: 1fr;
+font-size: 15vw;
+text-transform: uppercase;
+}
+@media (min-width: 70em) {
+.slider .text {
+    font-size: 10em;
+}
+}
+.slider .text div {
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 2;
+opacity: 0;
+}
+.slider .text div.current {
+opacity: 0.7;
+}
+.slider img {
+object-fit: cover;
+object-position: center center;
+width: 100%;
+height: 100%;
+filter: sepia(1) hue-rotate(180deg);
+display: block;
+}
+.slider .image {
+width: 100%;
+margin-right: -100%;
+opacity: 0;
+overflow: hidden;
+transform: translateY(0) scale(1.2);
+z-index: 1;
+}
+.slider .image.current {
+z-index: 10;
+transform: translateY(0) scale(1);
+opacity: 1;
+}
+
+
+/* canvas {
+    width: 100vw;
+    height: 100vh;
+    background: url(media/Frame\ 4.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.canvas-0 {
+    width: 100vw;
+    height: 100vh;
+    background: #2f2f4f;
+}
+
+.canvas-1 {
+    width: 100vw;
+    height: 100vh;
+    background: url(media/Frame\ 4.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+}
+
+aside {
+    display: block;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.Info {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3em;
+    margin: 0;
+    color: #fbfbfb;
+}
+
+.unact {
+    color: #b3b3b3;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.Poppins {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+
+    height: calc(100%/3);
+}
+
+.around {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.End { 
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.Img {
+    width: 5em;
+    height: auto;
+}
+
+.Logo {
+    font-size: 2em;
+    color: #fbfbfb;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 2em;
+}
+  
+
+/* PART 2 */
+
+.PhotoProfile {
+    background-image: url(media/rayul-_M6gy9oHgII-unsplash.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.BigText {
+    font-size: 3em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.Text {
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+}
+
+.Plashka {
+    width: 10em;
+    height: 10em;
+
+    background-color: #2f2f4f;
+    border-radius: 8px;
+}
+
+.EndBlockc {
+    width: 100%;
+    height: 5%;
+
+    background-color: #fbfbfb;
+    position: absolute;
+    bottom: 0;
+}
+
+.Alert {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.2em;
+    margin: 0;
+    color: #FFFFFF;
+}
+  
+form label {
+    position: relative;
+    display: block;
+}
+form label input {
+    font: 18px 'Raleway', Arial, sans-serif;
+    box-sizing: border-box;
+    display: block;
+    border: none;
+    padding: 20px;
+    width: 600px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+form label input::placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    font: 18px 'Raleway', Arial, sans-serif;
+}
+
+form label input:focus, form label input.populated {
+    padding-top: 28px;
+    padding-bottom: 12px;
+}
+
+form label input:focus::placeholder, form label input.populated::placeholder {
+    color: transparent;
+}
+form label input:focus + span, form label input.populated + span {
+    opacity: 1;
+    top: 10px;
+}
+form label span {
+    color: #35dc9b;
+    font: 13px 'Raleway', Arial, sans-serif;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+form input[type="submit"] {
+    transition: all 0.2s ease-in-out;
+    font: 18px 'Raleway', Arial, sans-serif;
+    border: none;
+    background: #2f2f4f;
+    color: #fff;
+    padding: 16px 40px;
+}
+form input[type="submit"]:hover {
+    background: #2f2f4f;
+}
